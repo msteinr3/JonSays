@@ -47,6 +47,14 @@ class Editor : Fragment() {
         binding.image.setImageURI(arguments?.getString("image")?.toUri())
         binding.btn1txt.text = arguments?.getString("btn1")?.toEditable()
         binding.btn2txt.text = arguments?.getString("btn2")?.toEditable()
+        binding.btn3txt.text = arguments?.getString("btn3")?.toEditable()
+        binding.btn4txt.text = arguments?.getString("btn4")?.toEditable()
+        binding.btn5txt.text = arguments?.getString("btn5")?.toEditable()
+        binding.btn6txt.text = arguments?.getString("btn6")?.toEditable()
+        binding.btn7xt.text = arguments?.getString("btn7")?.toEditable()
+        binding.btn8txt.text = arguments?.getString("btn8")?.toEditable()
+        binding.btn9txt.text = arguments?.getString("btn9")?.toEditable()
+        binding.btn10txt.text = arguments?.getString("btn10")?.toEditable()
 
         return binding.root
     }
@@ -81,7 +89,15 @@ class Editor : Fragment() {
                 "title" to binding.titleTxt.text.toString(),
                 "image" to imageUri.toString(),
                 "btn1" to binding.btn1txt.text.toString(),
-                "btn2" to binding.btn2txt.text.toString()
+                "btn2" to binding.btn2txt.text.toString(),
+                "btn3" to binding.btn3txt.text.toString(),
+                "btn4" to binding.btn4txt.text.toString(),
+                "btn5" to binding.btn5txt.text.toString(),
+                "btn6" to binding.btn6txt.text.toString(),
+                "btn7" to binding.btn7xt.text.toString(),
+                "btn8" to binding.btn8txt.text.toString(),
+                "btn9" to binding.btn9txt.text.toString(),
+                "btn10" to binding.btn10txt.text.toString()
             )
             findNavController().navigate(R.id.action_editor_to_jon, bundle)
         }
