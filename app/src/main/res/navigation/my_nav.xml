@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/jon">
+    <fragment
+        android:id="@+id/jon"
+        android:name="com.example.jonsays.Jon"
+        android:label="jon"
+        tools:layout="@layout/jon" >
+        <action
+            android:id="@+id/action_jon_to_editor"
+            app:destination="@id/editor" />
+    </fragment>
+    <fragment
+        android:id="@+id/editor"
+        android:name="com.example.jonsays.Editor"
+        android:label="editor"
+        tools:layout="@layout/editor" >
+        <action
+            android:id="@+id/action_editor_to_jon"
+            app:destination="@id/jon" />
+    </fragment>
+</navigation>
