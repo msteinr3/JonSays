@@ -421,9 +421,6 @@
             app:layout_constraintTop_toBottomOf="@+id/edit10"
             />
 
-
-
-
     <Button
         android:id="@+id/done"
         android:layout_width="wrap_content"

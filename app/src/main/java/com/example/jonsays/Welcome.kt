@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.jonsays.databinding.JonBinding
 import com.example.jonsays.databinding.WelcomeBinding
 
@@ -20,7 +21,6 @@ class Welcome : Fragment() {
     ): View? {
         _binding = WelcomeBinding.inflate(inflater, container, false);
 
-        //...
 
         return binding.root
     }
@@ -28,6 +28,8 @@ class Welcome : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //...
+        binding.start.setOnClickListener {
+            findNavController().navigate(R.id.action_welcome_to_jon)
+        }
     }
 }

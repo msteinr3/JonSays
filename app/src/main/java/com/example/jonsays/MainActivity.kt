@@ -1,5 +1,6 @@
 package com.example.jonsays
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.jonsays.databinding.ActivityMainBinding
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // write all the data entered by the user in SharedPreference and apply
         myEdit.putString("name", name)
         myEdit.putString("image", image)
+
         myEdit.putString("btn1", btn1)
         myEdit.putString("btn2", btn2)
         myEdit.putString("btn3", btn3)
@@ -35,6 +37,17 @@ class MainActivity : AppCompatActivity() {
         myEdit.putString("btn9", btn9)
         myEdit.putString("btn10", btn10)
 
+        myEdit.putString("sound1", sound1)
+        myEdit.putString("sound2", sound2)
+        myEdit.putString("sound3", sound3)
+        myEdit.putString("sound4", sound4)
+        myEdit.putString("sound5", sound5)
+        myEdit.putString("sound6", sound6)
+        myEdit.putString("sound7", sound7)
+        myEdit.putString("sound8", sound8)
+        myEdit.putString("sound9", sound9)
+        myEdit.putString("sound10", sound10)
+
         myEdit.apply()
     }
 
@@ -44,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         val sh = getSharedPreferences("MySharedPref", MODE_PRIVATE)
         name = sh.getString("name", "").toString()
         image = sh.getString("image", "").toString()
+
         btn1 = sh.getString("btn1", "").toString()
         btn2 = sh.getString("btn2", "").toString()
         btn3 = sh.getString("btn3", "").toString()
@@ -55,11 +69,22 @@ class MainActivity : AppCompatActivity() {
         btn9 = sh.getString("btn9", "").toString()
         btn10 = sh.getString("btn10", "").toString()
 
+        sound1 = sh.getString("sound1", "").toString()
+        sound2 = sh.getString("sound2", "").toString()
+        sound3 = sh.getString("sound3", "").toString()
+        sound4 = sh.getString("sound4", "").toString()
+        sound5 = sh.getString("sound5", "").toString()
+        sound6 = sh.getString("sound6", "").toString()
+        sound7 = sh.getString("sound7", "").toString()
+        sound8 = sh.getString("sound8", "").toString()
+        sound9 = sh.getString("sound9", "").toString()
+        sound10 = sh.getString("sound10", "").toString()
     }
 
     companion object {
         var name = "Jon Says"
         var image = ""
+
         var btn1 = "btn1"
         var btn2 = "btn2"
         var btn3 = "btn3"
@@ -70,5 +95,16 @@ class MainActivity : AppCompatActivity() {
         var btn8 = "btn8"
         var btn9 = "btn9"
         var btn10 = "btn10"
+
+        var sound1 = R.raw.record_new.toString()
+        var sound2 = R.raw.record_new.toString()
+        var sound3 = R.raw.record_new.toString()
+        var sound4 = R.raw.record_new.toString()
+        var sound5 = R.raw.record_new.toString()
+        var sound6 = R.raw.record_new.toString()
+        var sound7 = R.raw.record_new.toString()
+        var sound8 = R.raw.record_new.toString()
+        var sound9 = R.raw.record_new.toString()
+        var sound10 = R.raw.record_new.toString()
     }
 }

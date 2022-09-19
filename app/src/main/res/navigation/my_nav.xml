@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/jon">
+    app:startDestination="@id/welcome">
     <fragment
         android:id="@+id/jon"
         android:name="com.example.jonsays.Jon"
@@ -20,6 +20,15 @@
         tools:layout="@layout/editor">
         <action
             android:id="@+id/action_editor_to_jon"
+            app:destination="@id/jon" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.jonsays.Welcome"
+        android:label="welcome"
+        tools:layout="@layout/welcome">
+        <action
+            android:id="@+id/action_welcome_to_jon"
             app:destination="@id/jon" />
     </fragment>
 </navigation>
