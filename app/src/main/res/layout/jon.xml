@@ -38,11 +38,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn1"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/btn3"
         />
 
     <Button
@@ -50,11 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn2"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/btn3"
         />
 
     <Button
@@ -62,11 +62,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn3"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
         />
 
     <Button
@@ -74,11 +74,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn4"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn2"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
         />
 
     <Button
@@ -86,11 +86,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn5"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn3"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
         />
 
     <Button
@@ -98,11 +98,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn6"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn4"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
         />
 
     <Button
@@ -110,11 +110,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn7"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn5"
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
         />
 
     <Button
@@ -122,11 +122,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn8"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn6"
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
         />
 
     <Button
@@ -134,11 +134,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn9"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn7"
+        app:layout_constraintBottom_toTopOf="@+id/edit_btn"
         />
 
     <Button
@@ -146,11 +146,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="btn10"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn8"
+        app:layout_constraintBottom_toTopOf="@+id/edit_btn"
         />
 
     <Button
