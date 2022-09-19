@@ -20,6 +20,7 @@ class Editor : Fragment() {
     private var _binding: EditorBinding? = null
     private val binding get() = _binding!!
     private var imageUri: Uri? = null
+    private var sounds = mutableListOf<Uri>()
 
     private val pickItemLauncher: ActivityResultLauncher<Array<String>> =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) {
@@ -33,6 +34,18 @@ class Editor : Fragment() {
             imageUri = it
         }
 
+    private val pickAudioLauncher: ActivityResultLauncher<Array<String>> =
+        registerForActivityResult(ActivityResultContracts.OpenDocument()) {
+            //binding.image.setImageURI(it)
+            if (it != null) {
+                requireActivity().contentResolver.takePersistableUriPermission(
+                    it,
+                    Intent.FLAG_GRANT_READ_URI_PERMISSION
+                )
+                sounds.add(it!!)
+            }
+        }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -42,19 +55,20 @@ class Editor : Fragment() {
 
         fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
-        //button names stay same in editor
-        binding.titleTxt.text = arguments?.getString("title")?.toEditable()
-        binding.image.setImageURI(arguments?.getString("image")?.toUri())
-        binding.btn1txt.text = arguments?.getString("btn1")?.toEditable()
-        binding.btn2txt.text = arguments?.getString("btn2")?.toEditable()
-        binding.btn3txt.text = arguments?.getString("btn3")?.toEditable()
-        binding.btn4txt.text = arguments?.getString("btn4")?.toEditable()
-        binding.btn5txt.text = arguments?.getString("btn5")?.toEditable()
-        binding.btn6txt.text = arguments?.getString("btn6")?.toEditable()
-        binding.btn7xt.text = arguments?.getString("btn7")?.toEditable()
-        binding.btn8txt.text = arguments?.getString("btn8")?.toEditable()
-        binding.btn9txt.text = arguments?.getString("btn9")?.toEditable()
-        binding.btn10txt.text = arguments?.getString("btn10")?.toEditable()
+        //saved button names
+        binding.name.text = MainActivity.name.toEditable()
+        imageUri = MainActivity.image.toUri()
+        binding.image.setImageURI(imageUri)
+        binding.btn1txt.text = MainActivity.btn1.toEditable()
+        binding.btn2txt.text = MainActivity.btn2.toEditable()
+        binding.btn3txt.text = MainActivity.btn3.toEditable()
+        binding.btn4txt.text = MainActivity.btn4.toEditable()
+        binding.btn5txt.text = MainActivity.btn5.toEditable()
+        binding.btn6txt.text = MainActivity.btn6.toEditable()
+        binding.btn7txt.text = MainActivity.btn7.toEditable()
+        binding.btn8txt.text = MainActivity.btn8.toEditable()
+        binding.btn9txt.text = MainActivity.btn9.toEditable()
+        binding.btn10txt.text = MainActivity.btn10.toEditable()
 
         return binding.root
     }
@@ -68,7 +82,7 @@ class Editor : Fragment() {
             }
 
         binding.record1.setOnClickListener {
-
+            pickAudioLauncher.launch(arrayOf("audio/*"))
         }
 
         binding.record2.setOnClickListener {
@@ -84,22 +98,21 @@ class Editor : Fragment() {
         }
 
         binding.done.setOnClickListener {
-            //send edited button names
-            val bundle = bundleOf(
-                "title" to binding.titleTxt.text.toString(),
-                "image" to imageUri.toString(),
-                "btn1" to binding.btn1txt.text.toString(),
-                "btn2" to binding.btn2txt.text.toString(),
-                "btn3" to binding.btn3txt.text.toString(),
-                "btn4" to binding.btn4txt.text.toString(),
-                "btn5" to binding.btn5txt.text.toString(),
-                "btn6" to binding.btn6txt.text.toString(),
-                "btn7" to binding.btn7xt.text.toString(),
-                "btn8" to binding.btn8txt.text.toString(),
-                "btn9" to binding.btn9txt.text.toString(),
-                "btn10" to binding.btn10txt.text.toString()
-            )
-            findNavController().navigate(R.id.action_editor_to_jon, bundle)
+            //save edited button names
+            MainActivity.name = binding.name.text.toString()
+            MainActivity.image = imageUri.toString()
+            MainActivity.btn1 = binding.btn1txt.text.toString()
+            MainActivity.btn2 = binding.btn2txt.text.toString()
+            MainActivity.btn3 = binding.btn3txt.text.toString()
+            MainActivity.btn4 = binding.btn4txt.text.toString()
+            MainActivity.btn5 = binding.btn5txt.text.toString()
+            MainActivity.btn6 = binding.btn6txt.text.toString()
+            MainActivity.btn7 = binding.btn7txt.text.toString()
+            MainActivity.btn8 = binding.btn8txt.text.toString()
+            MainActivity.btn9 = binding.btn9txt.text.toString()
+            MainActivity.btn10 = binding.btn10txt.text.toString()
+
+            findNavController().navigate(R.id.action_editor_to_jon)
         }
     }
 }
