@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_jon_to_editor"
             app:destination="@id/editor" />
+        <action
+            android:id="@+id/action_jon_to_allPages"
+            app:destination="@id/allPages" />
     </fragment>
     <fragment
         android:id="@+id/editor"
@@ -28,7 +31,19 @@
         android:label="welcome"
         tools:layout="@layout/welcome">
         <action
-            android:id="@+id/action_welcome_to_jon"
+            android:id="@+id/action_welcome_to_allPages"
+            app:destination="@id/allPages" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPages"
+        android:name="com.example.jonsays.AllPages"
+        android:label="all_pages"
+        tools:layout="@layout/all_pages" >
+        <action
+            android:id="@+id/action_allPages_to_jon"
             app:destination="@id/jon" />
+        <action
+            android:id="@+id/action_allPages_to_editor"
+            app:destination="@id/editor" />
     </fragment>
 </navigation>

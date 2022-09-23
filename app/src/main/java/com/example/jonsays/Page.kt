@@ -4,10 +4,11 @@ import androidx.room.*
 
 @Entity(tableName = "pages")
 data class Page(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val id: Int,
-    var name: String,
+    var title: String,
     var image: String,
+    var favorite: Boolean = false,
 
     var btn1: String,
     var btn2: String,

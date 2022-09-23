@@ -10,10 +10,13 @@ interface PageDao {
     suspend fun addPage(page: Page)
 
     @Query("SELECT * FROM `pages` WHERE id = :id")
-    fun getRecipe(id: Int): LiveData<Page>
+    fun getPage(id: Int): LiveData<Page>
 
-    @Query("DELETE FROM `pages` WHERE id = :title") //???
-    suspend fun deleteByTitle(title: String) //userId: Int
+    @Query("SELECT * FROM `pages` ORDER BY name ASC")
+    fun getPages(): LiveData<List<Page>>
+
+    @Delete
+    suspend fun deletePage(vararg page: Page)
 
     @Update
     suspend fun update(vararg page: Page)

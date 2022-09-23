@@ -29,7 +29,7 @@ class Welcome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.start.setOnClickListener {
-            findNavController().navigate(R.id.action_welcome_to_jon)
+            findNavController().navigate(R.id.action_welcome_to_allPages)
         }
     }
 }
