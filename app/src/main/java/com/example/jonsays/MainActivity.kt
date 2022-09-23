@@ -96,15 +96,15 @@ class MainActivity : AppCompatActivity() {
         var btn9 = "btn9"
         var btn10 = "btn10"
 
-        var sound1 = R.raw.record_new.toString()
-        var sound2 = R.raw.record_new.toString()
-        var sound3 = R.raw.record_new.toString()
-        var sound4 = R.raw.record_new.toString()
-        var sound5 = R.raw.record_new.toString()
-        var sound6 = R.raw.record_new.toString()
-        var sound7 = R.raw.record_new.toString()
-        var sound8 = R.raw.record_new.toString()
-        var sound9 = R.raw.record_new.toString()
-        var sound10 = R.raw.record_new.toString()
+        var sound1 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound2 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound3 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound4 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound5 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound6 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound7 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound8 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound9 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
+        var sound10 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
     }
 }

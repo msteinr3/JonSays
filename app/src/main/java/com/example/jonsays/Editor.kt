@@ -20,23 +20,20 @@ class Editor : Fragment() {
     private var _binding: EditorBinding? = null
     private val binding get() = _binding!!
     private var imageUri: Uri? = null
-    private var sound: Uri? = null
+    private var sound: Uri = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
 
-    /*
-    var sounds = mutableListOf<Uri?>(
-        MainActivity.sound1.toUri(),
-        MainActivity.sound2.toUri(),
-        MainActivity.sound3.toUri(),
-        MainActivity.sound4.toUri(),
-        MainActivity.sound5.toUri(),
-        MainActivity.sound6.toUri(),
-        MainActivity.sound7.toUri(),
-        MainActivity.sound8.toUri(),
-        MainActivity.sound9.toUri(),
-        MainActivity.sound10.toUri()
+    var sounds = mutableListOf<Uri>(
+        Uri.parse(MainActivity.sound1),
+        Uri.parse(MainActivity.sound2),
+        Uri.parse(MainActivity.sound3),
+        Uri.parse(MainActivity.sound4),
+        Uri.parse(MainActivity.sound5),
+        Uri.parse(MainActivity.sound6),
+        Uri.parse(MainActivity.sound7),
+        Uri.parse(MainActivity.sound8),
+        Uri.parse(MainActivity.sound9),
+        Uri.parse(MainActivity.sound10)
     )
-
-     */
 
     private val pickItemLauncher: ActivityResultLauncher<Array<String>> =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) {
@@ -58,6 +55,8 @@ class Editor : Fragment() {
                     Intent.FLAG_GRANT_READ_URI_PERMISSION
                 )
                 sound = it
+            } else {
+                sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
             }
         }
 
@@ -91,6 +90,8 @@ class Editor : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
+
         binding.pic.setOnClickListener {
             pickItemLauncher.launch(arrayOf("image/*"))
                 binding.image.setImageURI(imageUri)
@@ -98,57 +99,66 @@ class Editor : Fragment() {
 
         binding.choose1.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            MainActivity.sound1 = sound.toString()
+            sounds[0] = sound
+            //binding.btn1txt.text = sound.toString().toEditable()
         }
 
         binding.choose2.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[1] = sound
+            sounds[1] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose3.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[2] = sound
+            sounds[2] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose4.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[3] = sound
+            sounds[3] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose5.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[4] = sound
+            sounds[4] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose6.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[5] = sound
+            sounds[5] = sound
+            sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose7.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[6] = sound
+            sounds[6] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose8.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[7] = sound
+            sounds[7] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose9.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[8] = sound
+            sounds[8] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
         binding.choose10.setOnClickListener {
             pickAudioLauncher.launch(arrayOf("audio/*"))
-            //sounds[9] = sound
+            sounds[9] = sound
+            //sound = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
         }
 
-
         binding.done.setOnClickListener {
-            //save edited button names
+            //save edited info
             MainActivity.name = binding.name.text.toString()
             MainActivity.image = imageUri.toString()
 
@@ -163,7 +173,6 @@ class Editor : Fragment() {
             MainActivity.btn9 = binding.btn9txt.text.toString()
             MainActivity.btn10 = binding.btn10txt.text.toString()
 
-            /*
             MainActivity.sound1 = sounds[0].toString()
             MainActivity.sound2 = sounds[1].toString()
             MainActivity.sound3 = sounds[2].toString()
@@ -174,8 +183,6 @@ class Editor : Fragment() {
             MainActivity.sound8 = sounds[7].toString()
             MainActivity.sound9 = sounds[8].toString()
             MainActivity.sound10 = sounds[9].toString()
-
-             */
 
             findNavController().navigate(R.id.action_editor_to_jon)
         }

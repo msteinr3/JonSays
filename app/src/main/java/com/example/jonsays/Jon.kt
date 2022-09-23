@@ -44,22 +44,21 @@ class Jon : Fragment() {
 
         var mp: MediaPlayer? = null
 
-        /*
-        var sounds = mutableListOf<Uri?>(
-            MainActivity.sound1.toUri(),
-            MainActivity.sound2.toUri(),
-            MainActivity.sound3.toUri(),
-            MainActivity.sound4.toUri(),
-            MainActivity.sound5.toUri(),
-            MainActivity.sound6.toUri(),
-            MainActivity.sound7.toUri(),
-            MainActivity.sound8.toUri(),
-            MainActivity.sound9.toUri(),
-            MainActivity.sound10.toUri()
+        var sounds = mutableListOf<Uri>(
+            Uri.parse(MainActivity.sound1),
+            Uri.parse(MainActivity.sound2),
+            Uri.parse(MainActivity.sound3),
+            Uri.parse(MainActivity.sound4),
+            Uri.parse(MainActivity.sound5),
+            Uri.parse(MainActivity.sound6),
+            Uri.parse(MainActivity.sound7),
+            Uri.parse(MainActivity.sound8),
+            Uri.parse(MainActivity.sound9),
+            Uri.parse(MainActivity.sound10),
         )
-         */
 
-        fun playSound(song: Uri?) {
+
+        fun playSound(song: Uri) {
             if (mp == null) {
                 mp = MediaPlayer.create(requireContext(), song)
                 mp!!.isLooping = false
@@ -80,47 +79,54 @@ class Jon : Fragment() {
         }
 
         binding.btn1.setOnClickListener {
-            playSound(MainActivity.sound1.toUri())
+            stopSound()
+            playSound(sounds[0])
         }
 
-        /*
         binding.btn2.setOnClickListener {
+            stopSound()
             playSound(sounds[1])
         }
 
         binding.btn3.setOnClickListener {
+            stopSound()
             playSound(sounds[2])
         }
 
         binding.btn4.setOnClickListener {
+            stopSound()
             playSound(sounds[3])
         }
 
         binding.btn5.setOnClickListener {
+            stopSound()
             playSound(sounds[4])
         }
 
         binding.btn6.setOnClickListener {
+            stopSound()
             playSound(sounds[5])
         }
 
         binding.btn7.setOnClickListener {
+            stopSound()
             playSound(sounds[6])
         }
 
         binding.btn8.setOnClickListener {
+            stopSound()
             playSound(sounds[7])
         }
 
         binding.btn9.setOnClickListener {
+            stopSound()
             playSound(sounds[8])
         }
 
         binding.btn10.setOnClickListener {
+            stopSound()
             playSound(sounds[9])
         }
-
-         */
 
         binding.editBtn.setOnClickListener {
             findNavController().navigate(R.id.action_jon_to_editor)
