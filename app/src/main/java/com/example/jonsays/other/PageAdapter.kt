@@ -1,10 +1,10 @@
-package com.example.jonsays
+package com.example.jonsays.other
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
+import com.example.jonsays.R
 import com.example.jonsays.databinding.PageLayoutBinding
 
 class PageAdapter(private val listener: PageItemListener) :
@@ -22,7 +22,8 @@ RecyclerView.Adapter<PageAdapter.PageViewHolder>(){
     override fun onBindViewHolder(holder: PageViewHolder, position: Int) = holder.bind(pages[position])
 
     inner class PageViewHolder(private val pageBinding: PageLayoutBinding,
-                                 private val listener: PageItemListener)
+                                 private val listener: PageItemListener
+    )
         : RecyclerView.ViewHolder(pageBinding.root),
         View.OnClickListener, View.OnLongClickListener {
 
@@ -52,7 +53,13 @@ RecyclerView.Adapter<PageAdapter.PageViewHolder>(){
     }
 
     interface PageItemListener {
-        fun onPageClick(recipeId : Int)
+        fun onPageClick(pageId : Int)
         fun onPageLongClick(page: Page)
+    }
+
+    fun setPages(pages : Collection<Page>) {
+        this.pages.clear()
+        this.pages.addAll(pages)
+        notifyDataSetChanged()
     }
 }

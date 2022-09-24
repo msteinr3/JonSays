@@ -1,4 +1,4 @@
-package com.example.jonsays
+package com.example.jonsays.other
 
 import android.content.Context
 import androidx.room.*

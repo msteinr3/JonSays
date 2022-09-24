@@ -23,6 +23,30 @@ class MainActivity : AppCompatActivity() {
         val myEdit = sharedPreferences.edit()
 
         // write all the data entered by the user in SharedPreference and apply
+        myEdit.putInt("id", id)
+        myEdit.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Fetching stored data from SharedPreference
+        val sh = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+        id = sh.getInt("id", 0)
+    }
+
+    companion object {
+        var id = 1
+    }
+
+
+/*
+    override fun onPause() {
+        super.onPause()
+        // Creating a shared pref object
+        val sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE)
+        val myEdit = sharedPreferences.edit()
+
+        // write all the data entered by the user in SharedPreference and apply
         myEdit.putString("name", name)
         myEdit.putString("image", image)
 
@@ -107,4 +131,6 @@ class MainActivity : AppCompatActivity() {
         var sound9 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
         var sound10 = "android.resource://" + "com.example.jonsays" + "/raw/record_new"
     }
+
+     */
 }

@@ -1,4 +1,4 @@
-package com.example.jonsays
+package com.example.jonsays.other
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -12,7 +12,7 @@ interface PageDao {
     @Query("SELECT * FROM `pages` WHERE id = :id")
     fun getPage(id: Int): LiveData<Page>
 
-    @Query("SELECT * FROM `pages` ORDER BY name ASC")
+    @Query("SELECT * FROM `pages` ORDER BY title ASC")
     fun getPages(): LiveData<List<Page>>
 
     @Delete
