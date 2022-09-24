@@ -30,7 +30,7 @@ class Editor : Fragment() {
     private val binding get() = _binding!!
     private var imageUri: Uri? = null
     private var sound: Uri = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
-    private var ID : Int? = null
+    private var id : Int? = null
     private val viewModel : PageViewModel by viewModels()
     private val allViewModel: AllPagesViewModel by viewModels()
     private var sounds = mutableListOf<Uri>(sound, sound, sound, sound, sound, sound, sound, sound, sound, sound)
@@ -67,12 +67,16 @@ class Editor : Fragment() {
     ): View? {
         _binding = EditorBinding.inflate(inflater, container, false);
 
-        viewModel.page.observe(viewLifecycleOwner) {
-            update(it)
-        }
+        id = arguments?.getInt("id")
 
-        ID?.let {
-            viewModel.setId(it)
+        if (id != null) {
+            viewModel.page.observe(viewLifecycleOwner) {
+                update(it)
+            }
+
+            id?.let {
+                viewModel.setId(it)
+            }
         }
 
         return binding.root
@@ -81,7 +85,7 @@ class Editor : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        ID = arguments?.getInt("id")
+        id = arguments?.getInt("id")
 
         binding.pic.setOnClickListener {
             pickItemLauncher.launch(arrayOf("image/*"))
@@ -140,13 +144,13 @@ class Editor : Fragment() {
 
         binding.done.setOnClickListener {
 
-            if (ID == null) {
+            if (id == null) {
                 MainActivity.id += 1
-                ID = MainActivity.id
+                id = MainActivity.id
             }
 
             val page = Page(
-                ID!!,
+                id!!,
                 binding.name.text.toString(),
                 imageUri.toString(),
                 false,

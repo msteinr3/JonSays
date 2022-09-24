@@ -24,7 +24,7 @@ class Jon : Fragment() {
 
     private var _binding: JonBinding? = null
     private val binding get() = _binding!!
-    private val id = arguments?.getInt("id")
+    private var id : Int? = null
     private val viewModel : PageViewModel by viewModels()
     private var sound: Uri = Uri.parse("android.resource://" + "com.example.jonsays" + "/raw/record_new")
     private var sounds = mutableListOf<Uri>(sound, sound, sound, sound, sound, sound, sound, sound, sound, sound)
@@ -36,6 +36,8 @@ class Jon : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = JonBinding.inflate(inflater, container, false);
+
+        id = arguments?.getInt("id")!!
 
         viewModel.page.observe(viewLifecycleOwner) {
             update(it)
@@ -116,7 +118,7 @@ class Jon : Fragment() {
         }
 
         binding.editBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_jon_to_editor, bundleOf("id" to arguments?.getInt("id")))
+            findNavController().navigate(R.id.action_jon_to_editor, bundleOf("id" to id))
         }
 
         binding.home.setOnClickListener {

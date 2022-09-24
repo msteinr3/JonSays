@@ -42,7 +42,7 @@ class AllPages : Fragment(), PageAdapter.PageItemListener {
         super.onViewCreated(view, savedInstanceState)
 
         binding.newPage.setOnClickListener {
-            findNavController().navigate(R.id.action_allPages_to_editor, bundleOf("id" to 0))
+            findNavController().navigate(R.id.action_allPages_to_editor)
         }
 
         adapter = PageAdapter(this)
@@ -52,6 +52,7 @@ class AllPages : Fragment(), PageAdapter.PageItemListener {
 
         allViewModel.pages?.observe(viewLifecycleOwner) {
             adapter.setPages(it)
+            binding.number.text = adapter.itemCount.toString()
         }
     }
 
