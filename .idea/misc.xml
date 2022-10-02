@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_baseline_home.xml" value="0.1305" />
+        <entry key="app/src/main/res/drawable/ic_baseline_mic.xml" value="0.1485" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/all_pages.xml" value="0.25" />
         <entry key="app/src/main/res/layout/editor.xml" value="0.25" />

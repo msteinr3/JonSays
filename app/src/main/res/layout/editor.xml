@@ -64,7 +64,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edit1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image">
@@ -77,33 +77,26 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/record1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="record sound 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/choose1"
-        app:layout_constraintTop_toBottomOf="@+id/edit1"
-        />
-
-    <Button
-        android:id="@+id/choose1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="choose sound 1"
-        app:layout_constraintStart_toEndOf="@+id/record1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit1"
-        />
+        <ImageButton
+            android:id="@+id/choose1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit1"
+            app:layout_constraintBottom_toBottomOf="@id/edit1"
+            />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edit2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/record1">
+        app:layout_constraintTop_toBottomOf="@+id/edit1">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/btn2txt"
@@ -113,33 +106,26 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/record2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="record sound 2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/choose2"
-        app:layout_constraintTop_toBottomOf="@+id/edit2"
-        />
-
-    <Button
-        android:id="@+id/choose2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="choose sound 2"
-        app:layout_constraintStart_toEndOf="@+id/record2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit2"
-        />
+        <ImageButton
+            android:id="@+id/choose2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edit2"
+            app:layout_constraintBottom_toBottomOf="@id/edit2"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record2">
+            app:layout_constraintTop_toBottomOf="@+id/edit2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn3txt"
@@ -149,33 +135,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose1"
-            app:layout_constraintTop_toBottomOf="@+id/edit3"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 3"
-            app:layout_constraintStart_toEndOf="@+id/record1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit3"
+            app:layout_constraintTop_toTopOf="@+id/edit3"
+            app:layout_constraintBottom_toBottomOf="@id/edit3"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit4"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record3">
+            app:layout_constraintTop_toBottomOf="@+id/edit3">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn4txt"
@@ -185,33 +164,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose2"
-            app:layout_constraintTop_toBottomOf="@+id/edit4"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 4"
-            app:layout_constraintStart_toEndOf="@+id/record2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit4"
+            app:layout_constraintTop_toTopOf="@+id/edit4"
+            app:layout_constraintBottom_toBottomOf="@id/edit4"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit5"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record4">
+            app:layout_constraintTop_toBottomOf="@+id/edit4">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn5txt"
@@ -221,33 +193,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose1"
-            app:layout_constraintTop_toBottomOf="@+id/edit5"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 5"
-            app:layout_constraintStart_toEndOf="@+id/record1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit5"
+            app:layout_constraintTop_toTopOf="@+id/edit5"
+            app:layout_constraintBottom_toBottomOf="@id/edit5"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit6"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record5">
+            app:layout_constraintTop_toBottomOf="@+id/edit5">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn6txt"
@@ -257,33 +222,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose2"
-            app:layout_constraintTop_toBottomOf="@+id/edit6"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 6"
-            app:layout_constraintStart_toEndOf="@+id/record2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit6"
+            app:layout_constraintTop_toTopOf="@+id/edit6"
+            app:layout_constraintBottom_toBottomOf="@id/edit6"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit7"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record6">
+            app:layout_constraintTop_toBottomOf="@+id/edit6">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn7txt"
@@ -293,33 +251,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 7"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose1"
-            app:layout_constraintTop_toBottomOf="@+id/edit7"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 7"
-            app:layout_constraintStart_toEndOf="@+id/record1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit7"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit7"
+            app:layout_constraintTop_toTopOf="@+id/edit7"
+            app:layout_constraintBottom_toBottomOf="@id/edit7"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit8"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record7">
+            app:layout_constraintTop_toBottomOf="@+id/edit7">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn8txt"
@@ -329,33 +280,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose2"
-            app:layout_constraintTop_toBottomOf="@+id/edit8"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 8"
-            app:layout_constraintStart_toEndOf="@+id/record2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit8"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit8"
+            app:layout_constraintTop_toTopOf="@+id/edit8"
+            app:layout_constraintBottom_toBottomOf="@id/edit8"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit9"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record8">
+            app:layout_constraintTop_toBottomOf="@+id/edit8">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn9txt"
@@ -365,33 +309,26 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose1"
-            app:layout_constraintTop_toBottomOf="@+id/edit9"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 9"
-            app:layout_constraintStart_toEndOf="@+id/record1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit9"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit9"
+            app:layout_constraintTop_toTopOf="@+id/edit9"
+            app:layout_constraintBottom_toBottomOf="@id/edit9"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/edit10"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/record9">
+            app:layout_constraintTop_toBottomOf="@+id/edit9">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/btn10txt"
@@ -401,24 +338,17 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/record10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="record sound 10"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/choose2"
-            app:layout_constraintTop_toBottomOf="@+id/edit10"
-            />
-
-        <Button
+        <ImageButton
             android:id="@+id/choose10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="choose sound 10"
-            app:layout_constraintStart_toEndOf="@+id/record2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_mic"
+            android:scaleType="fitXY"
+            android:backgroundTint="@color/red"
+            app:layout_constraintStart_toEndOf="@+id/edit10"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit10"
+            app:layout_constraintTop_toTopOf="@+id/edit10"
+            app:layout_constraintBottom_toBottomOf="@id/edit10"
             />
 
     <Button
@@ -430,9 +360,113 @@
         android:backgroundTint="@color/cardview_dark_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/record10"
+        app:layout_constraintTop_toBottomOf="@+id/edit10"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
+
+    <!-- comment start
+    <Button
+        android:id="@+id/record1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose1"
+        app:layout_constraintTop_toBottomOf="@+id/edit1"
+        />
+
+<Button
+    android:id="@+id/record2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="choose sound 2"
+    app:layout_constraintStart_toEndOf="@+id/record2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edit2"
+    />
+
+    <Button
+        android:id="@+id/record3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose1"
+        app:layout_constraintTop_toBottomOf="@+id/edit3"
+        />
+
+    <Button
+        android:id="@+id/record4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose2"
+        app:layout_constraintTop_toBottomOf="@+id/edit4"
+        />
+
+    <Button
+        android:id="@+id/record5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose1"
+        app:layout_constraintTop_toBottomOf="@+id/edit5"
+        />
+
+    <Button
+        android:id="@+id/record6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose2"
+        app:layout_constraintTop_toBottomOf="@+id/edit6"
+        />
+
+    <Button
+        android:id="@+id/record7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose1"
+        app:layout_constraintTop_toBottomOf="@+id/edit7"
+        />
+
+    <Button
+        android:id="@+id/record8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose2"
+        app:layout_constraintTop_toBottomOf="@+id/edit8"
+        />
+
+    <Button
+        android:id="@+id/record9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="record sound 9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/choose1"
+        app:layout_constraintTop_toBottomOf="@+id/edit9"
+        />
+
+    <Button
+        android:id="@+id/choose10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="choose sound 10"
+        app:layout_constraintStart_toEndOf="@+id/record2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit10"
+        />
+
+   comment end -->
