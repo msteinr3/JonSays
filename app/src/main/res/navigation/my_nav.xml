@@ -48,5 +48,17 @@
         <action
             android:id="@+id/action_allPages_to_editor"
             app:destination="@id/editor" />
+        <action
+            android:id="@+id/action_allPages_to_weight2"
+            app:destination="@id/weight2" />
+    </fragment>
+    <fragment
+        android:id="@+id/weight2"
+        android:name="com.example.jonsays.ui.Weight"
+        android:label="weight"
+        tools:layout="@layout/weight" >
+        <action
+            android:id="@+id/action_weight2_to_allPages"
+            app:destination="@id/allPages" />
     </fragment>
 </navigation>

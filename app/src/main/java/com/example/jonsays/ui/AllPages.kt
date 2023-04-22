@@ -45,6 +45,10 @@ class AllPages : Fragment(), PageAdapter.PageItemListener {
             findNavController().navigate(R.id.action_allPages_to_editor)
         }
 
+        binding.weight.setOnClickListener {
+            findNavController().navigate(R.id.action_allPages_to_weight2)
+        }
+
         adapter = PageAdapter(this)
         binding.recycler.layoutManager =
             LinearLayoutManager(requireContext())
